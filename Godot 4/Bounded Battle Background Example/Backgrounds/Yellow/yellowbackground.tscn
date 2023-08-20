@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://3ftarrya6opn"]
+
+[ext_resource type="Shader" uid="uid://73w1cyhrn7vl" path="res://Shader/BoundedBattleBackground.tres" id="1_gk0q8"]
+[ext_resource type="Texture2D" uid="uid://c05o77ftf0t44" path="res://Backgrounds/Yellow/YellowPalette.png" id="2_c488l"]
+[ext_resource type="Texture2D" uid="uid://dehvviklxtj4k" path="res://Backgrounds/Yellow/Yellow.png" id="3_a40om"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_87ccj"]
+shader = ExtResource("1_gk0q8")
+shader_parameter/snes_transparency = false
+shader_parameter/gba_transparency = true
+shader_parameter/horizontal_scan_line = false
+shader_parameter/vertical_scan_line = false
+shader_parameter/enable_palette_cycling = true
+shader_parameter/sprite_scroll_direction = Vector2(-1, 0)
+shader_parameter/sprite_scroll_speed = 0.05
+shader_parameter/gba_transparency_scroll_direction = Vector2(1, 0)
+shader_parameter/gba_transparency_scroll_speed = 0.05
+shader_parameter/gba_transparency_value = 0.5
+shader_parameter/horizontal_wave_amplitude = 0.1
+shader_parameter/horizontal_wave_frequency = 12.0
+shader_parameter/horizontal_wave_speed = 1.0
+shader_parameter/vertical_wave_amplitude = 0.0
+shader_parameter/vertical_wave_frequency = 0.0
+shader_parameter/vertical_wave_speed = 1.0
+shader_parameter/horizontal_deform_amplitude = 0.05
+shader_parameter/horizontal_deform_frequency = 6.0
+shader_parameter/horizontal_deform_speed = 1.0
+shader_parameter/vertical_deform_amplitude = 0.0
+shader_parameter/vertical_deform_frequency = 0.0
+shader_parameter/vertical_deform_speed = 1.0
+shader_parameter/width = 272.0
+shader_parameter/height = 160.0
+shader_parameter/palette_cycling_speed = 0.1
+shader_parameter/palette = ExtResource("2_c488l")
+
+[node name="Yellow" type="Sprite2D"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_87ccj")
+position = Vector2(136, 80)
+texture = ExtResource("3_a40om")

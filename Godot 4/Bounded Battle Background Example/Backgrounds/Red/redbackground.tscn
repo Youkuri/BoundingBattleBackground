@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3hw2e40dj1l5"]
+
+[ext_resource type="Shader" uid="uid://73w1cyhrn7vl" path="res://Shader/BoundedBattleBackground.tres" id="1_evxt4"]
+[ext_resource type="Texture2D" uid="uid://btb0hfacbpgvd" path="res://Backgrounds/Red/RedBack.png" id="2_0awgp"]
+[ext_resource type="Texture2D" uid="uid://dnbi8nbqer50r" path="res://Backgrounds/Red/RedFore.png" id="3_1h26d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ndu05"]
+shader = ExtResource("1_evxt4")
+shader_parameter/snes_transparency = false
+shader_parameter/gba_transparency = false
+shader_parameter/horizontal_scan_line = false
+shader_parameter/vertical_scan_line = false
+shader_parameter/enable_palette_cycling = false
+shader_parameter/sprite_scroll_direction = Vector2(0, 0)
+shader_parameter/sprite_scroll_speed = 0.01
+shader_parameter/gba_transparency_scroll_direction = Vector2(0, 0)
+shader_parameter/gba_transparency_scroll_speed = 0.01
+shader_parameter/gba_transparency_value = 0.5
+shader_parameter/horizontal_wave_amplitude = 0.0
+shader_parameter/horizontal_wave_frequency = 0.0
+shader_parameter/horizontal_wave_speed = 1.0
+shader_parameter/vertical_wave_amplitude = 0.25
+shader_parameter/vertical_wave_frequency = 6.0
+shader_parameter/vertical_wave_speed = 1.0
+shader_parameter/horizontal_deform_amplitude = 0.0
+shader_parameter/horizontal_deform_frequency = 0.0
+shader_parameter/horizontal_deform_speed = 1.0
+shader_parameter/vertical_deform_amplitude = 0.1
+shader_parameter/vertical_deform_frequency = 6.0
+shader_parameter/vertical_deform_speed = 1.0
+shader_parameter/width = 272.0
+shader_parameter/height = 160.0
+shader_parameter/palette_cycling_speed = 0.1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kudqw"]
+shader = ExtResource("1_evxt4")
+shader_parameter/snes_transparency = false
+shader_parameter/gba_transparency = true
+shader_parameter/horizontal_scan_line = false
+shader_parameter/vertical_scan_line = false
+shader_parameter/enable_palette_cycling = false
+shader_parameter/sprite_scroll_direction = Vector2(0, 0)
+shader_parameter/sprite_scroll_speed = 0.01
+shader_parameter/gba_transparency_scroll_direction = Vector2(0, 0)
+shader_parameter/gba_transparency_scroll_speed = 0.01
+shader_parameter/gba_transparency_value = 0.5
+shader_parameter/horizontal_wave_amplitude = 0.05
+shader_parameter/horizontal_wave_frequency = 2.0
+shader_parameter/horizontal_wave_speed = 1.0
+shader_parameter/vertical_wave_amplitude = 0.0
+shader_parameter/vertical_wave_frequency = 0.0
+shader_parameter/vertical_wave_speed = 1.0
+shader_parameter/horizontal_deform_amplitude = 0.0
+shader_parameter/horizontal_deform_frequency = 0.0
+shader_parameter/horizontal_deform_speed = 1.0
+shader_parameter/vertical_deform_amplitude = 0.0
+shader_parameter/vertical_deform_frequency = 0.0
+shader_parameter/vertical_deform_speed = 1.0
+shader_parameter/width = 272.0
+shader_parameter/height = 160.0
+shader_parameter/palette_cycling_speed = 0.1
+
+[node name="RedBack" type="Sprite2D"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ndu05")
+position = Vector2(136, 80)
+texture = ExtResource("2_0awgp")
+
+[node name="RedFore" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_kudqw")
+texture = ExtResource("3_1h26d")

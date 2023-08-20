@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Shaders/BoundingBattleBackground.tres" type="Shader" id=1]
+[ext_resource path="res://Backgrounds/Blue/BlueBack.png" type="Texture" id=2]
+[ext_resource path="res://Backgrounds/Blue/BlueFore.png" type="Texture" id=3]
+[ext_resource path="res://Backgrounds/Blue/BluePalette.png" type="Texture" id=4]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/_c_Settings = null
+shader_param/snes_transparency = true
+shader_param/gba_transparency = false
+shader_param/horizontal_scan_line = false
+shader_param/vertical_scan_line = false
+shader_param/enable_palette_cycling = true
+shader_param/_c_Sprite_Scroll = null
+shader_param/sprite_scroll_direction = Vector2( 0, 0 )
+shader_param/sprite_scroll_speed = 0.01
+shader_param/_c_GBA_Transparency = null
+shader_param/gba_transparency_scroll_direction = Vector2( 0, 0 )
+shader_param/gba_transparency_scroll_speed = 0.01
+shader_param/gba_transparency_value = 0.5
+shader_param/_c_Horizontal_Wave = null
+shader_param/horizontal_wave_amplitude = 0.01
+shader_param/horizontal_wave_frequency = 25.0
+shader_param/horizontal_wave_speed = 1.0
+shader_param/_c_Vertical_Wave = null
+shader_param/vertical_wave_amplitude = 0.0
+shader_param/vertical_wave_frequency = 0.0
+shader_param/vertical_wave_speed = 1.0
+shader_param/_c_Horizontal_Deform = null
+shader_param/horizontal_deform_amplitude = 0.005
+shader_param/horizontal_deform_frequency = 12.0
+shader_param/horizontal_deform_speed = 1.0
+shader_param/_c_Vertical_Deform = null
+shader_param/vertical_deform_amplitude = 0.05
+shader_param/vertical_deform_frequency = 6.0
+shader_param/vertical_deform_speed = 1.0
+shader_param/_c_Size = null
+shader_param/width = 272.0
+shader_param/height = 160.0
+shader_param/_c_Palette_Cycling = null
+shader_param/palette_cycling_speed = 0.1
+shader_param/palette = ExtResource( 4 )
+
+[node name="BlueBack" type="Sprite"]
+position = Vector2( 136, 80 )
+texture = ExtResource( 2 )
+
+[node name="BlueFore" type="Sprite" parent="."]
+material = SubResource( 1 )
+texture = ExtResource( 3 )

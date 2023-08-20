@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://d258p5scw40m4"]
+
+[ext_resource type="Texture2D" uid="uid://dd07gdbxlr8xr" path="res://Backgrounds/Blue/BlueBack.png" id="1_4mnt4"]
+[ext_resource type="Shader" uid="uid://73w1cyhrn7vl" path="res://Shader/BoundedBattleBackground.tres" id="2_cplsm"]
+[ext_resource type="Texture2D" uid="uid://cwbnprjpijd2o" path="res://Backgrounds/Blue/BlueFore.png" id="2_ea0vt"]
+[ext_resource type="Texture2D" uid="uid://coorpewfmbhur" path="res://Backgrounds/Blue/BluePalette.png" id="3_j40gt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3oiyt"]
+shader = ExtResource("2_cplsm")
+shader_parameter/snes_transparency = true
+shader_parameter/gba_transparency = false
+shader_parameter/horizontal_scan_line = false
+shader_parameter/vertical_scan_line = false
+shader_parameter/enable_palette_cycling = true
+shader_parameter/sprite_scroll_direction = Vector2(0, 0)
+shader_parameter/sprite_scroll_speed = 0.01
+shader_parameter/gba_transparency_scroll_direction = Vector2(0, 0)
+shader_parameter/gba_transparency_scroll_speed = 0.01
+shader_parameter/gba_transparency_value = 0.5
+shader_parameter/horizontal_wave_amplitude = 0.01
+shader_parameter/horizontal_wave_frequency = 25.0
+shader_parameter/horizontal_wave_speed = 1.0
+shader_parameter/vertical_wave_amplitude = 0.0
+shader_parameter/vertical_wave_frequency = 0.0
+shader_parameter/vertical_wave_speed = 1.0
+shader_parameter/horizontal_deform_amplitude = 0.005
+shader_parameter/horizontal_deform_frequency = 12.0
+shader_parameter/horizontal_deform_speed = 1.0
+shader_parameter/vertical_deform_amplitude = 0.05
+shader_parameter/vertical_deform_frequency = 6.0
+shader_parameter/vertical_deform_speed = 1.0
+shader_parameter/width = 272.0
+shader_parameter/height = 160.0
+shader_parameter/palette_cycling_speed = 0.1
+shader_parameter/palette = ExtResource("3_j40gt")
+
+[node name="BlueBack" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(136, 80)
+texture = ExtResource("1_4mnt4")
+
+[node name="BlueFore" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_3oiyt")
+texture = ExtResource("2_ea0vt")

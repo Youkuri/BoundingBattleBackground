@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtj7rxpbhrlyh"]
+
+[ext_resource type="Script" path="res://GarbageScript.gd" id="1_0wyyc"]
+[ext_resource type="PackedScene" uid="uid://3ftarrya6opn" path="res://Backgrounds/Yellow/yellowbackground.tscn" id="1_4th2d"]
+[ext_resource type="PackedScene" uid="uid://b3hw2e40dj1l5" path="res://Backgrounds/Red/redbackground.tscn" id="1_hahqg"]
+[ext_resource type="PackedScene" uid="uid://d258p5scw40m4" path="res://Backgrounds/Blue/bluebackground.tscn" id="3_p2a8e"]
+[ext_resource type="PackedScene" uid="uid://bv5nephr8c0d3" path="res://Backgrounds/Black/blackbackground.tscn" id="4_a8wem"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0wyyc")
+
+[node name="Yellow" parent="." instance=ExtResource("1_4th2d")]
+
+[node name="RedBack" parent="." instance=ExtResource("1_hahqg")]
+position = Vector2(408, 80)
+
+[node name="BlueBack" parent="." instance=ExtResource("3_p2a8e")]
+position = Vector2(136, 240)
+
+[node name="BlackBack" parent="." instance=ExtResource("4_a8wem")]
+position = Vector2(408, 240)
+
+[node name="CameraMan" type="Camera2D" parent="."]
+position = Vector2(136, 80)
